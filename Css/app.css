@@ -1,0 +1,71 @@
+/* 
+
+- App style
+
+*/
+:root{
+    --main-bg-color:#14182A;
+    --white:white;
+    --black:black;
+    --main-font:'JosefinSans';
+    --bold-font:'JosefinSans-bold';
+    --light-blue:#3bc8e7;
+    --caption-color:#777777;
+  }
+  html {
+  font-size: 62.5%; 
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  }
+  
+  *,
+  *::after,
+  *::before {
+  box-sizing: inherit;
+  }
+  
+  .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+}
+  
+  body {
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  font-family: var(--main-font);
+  background-color:var(--main-bg-color);
+  color: var(--white)
+  }
+  
+  /*
+  
+  -- Reset Styles
+  
+  */
+  a {
+  text-decoration: none;
+  }
+  
+  ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+  }
+  /*
+  
+  -- Helper Classes
+  
+  */
+  .center{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+  }
+
+  
+
+  
