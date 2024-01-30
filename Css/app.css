@@ -134,8 +134,8 @@
     color: var(--main-color);
 }
 .nav__left {
-   border-left: solid .1rem var(--bg-color);
-   padding-left: 2rem;
+   border-left:  solid .1rem var(--bg-color);
+   padding-left: 1rem;
 }
 
 .nav__menu {
@@ -182,12 +182,13 @@
    gap: 1rem;
    cursor: pointer;
    transition: var(--text-transition);
+   margin-right: 2rem;
 }
 .nav__shares:hover {
     color: var(--main-color);
  }
 .nav__share {
-    margin-right: 1rem;
+    margin-right: .5rem;
 }
 
 .fa-solid {
@@ -233,4 +234,86 @@
 }
 .nav__log-image{
     width: 15rem;
+}
+
+
+
+
+
+
+
+
+  /*
+  
+  ---------------------- Main
+  
+  */
+
+
+
+
+
+
+
+
+
+  /*
+  
+  -- Static
+  
+  */
+
+
+
+
+
+
+.static{
+    width: 36%;
+    height: 86vh;
+    background-image: url(../Images/bg-image/10.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 1rem;
+    position: relative;
+    z-index: 10;
+    margin-left: 2rem;
+}
+.static::after{
+   content: '';
+   position: absolute;
+   background-color:var(--main-bg-color);
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   opacity: 60%;
+   z-index: -10;
+}
+.static__wrapper{
+    position: relative;
+}
+.static__data{
+    position: absolute;
+    top: 54rem;
+}
+.static__title{
+    font-size: 6rem;
+    color: var(--main-color);
+}
+.static__caption{
+    line-height: 2.2rem;
+}
+
+
+
+
+
+
+
+
+
+
+.main-sesction{
+    justify-content: space-between;
 }
