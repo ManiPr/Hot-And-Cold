@@ -80,9 +80,51 @@
   
   */
 
+.header__video{
+    position: relative;
+}
+.header__video::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-bg-color);
+    top: 0;
+    left: 0;
+    opacity: 50%;
+}
 
+.header-content{
 
+}
+.header-content__item{
 
+}
+.header-content__left{
+
+}
+.header-content__info{
+
+}
+
+.header-content__title{
+
+}
+.header-content__button{
+
+}
+.header-content__right{
+
+}
+.header-content__socials{
+
+}
+.header-content__social{
+
+}
+.header-content__dot{
+
+}
 
 
 
@@ -100,8 +142,11 @@
   
   */
 
+
+
+
+
   .nav {
-    /* styles for .nav */
 }
 
 .nav__wrapper {
@@ -117,7 +162,6 @@
 }
 
 .center {
-    /* styles for .center */
 }
 
 .nav__information {
@@ -192,11 +236,9 @@
 }
 
 .fa-solid {
-    /* styles for .fa-solid */
 }
 
 .fa-chevron-down {
-    /* styles for .fa-chevron-down */
 }
 
 .nav__book {
@@ -218,19 +260,15 @@
 }
 
 .fa {
-    /* styles for .fa */
 }
 
 .fa-shopping-basket {
-    /* styles for .fa-shopping-basket */
 }
 
 .nav__shopping-count {
-    /* styles for .nav__shopping-count */
 }
 
 .nav__logo {
-    /* styles for .nav__logo */
 }
 .nav__log-image{
     width: 15rem;
@@ -316,4 +354,34 @@
 
 .main-sesction{
     justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }

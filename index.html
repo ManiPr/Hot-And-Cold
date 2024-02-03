@@ -8,6 +8,10 @@
 </head>
 <body>
     <header class="header">
+        <video autoplay loop muted class="header__video" style="position: absolute; width: 100%; left: 0; top: 0; height: 100%; object-fit: cover; z-index: -1;">
+            <source src="./Video/video.mp4" type="video/mp4">
+            مرورگر شما این ویدیو را پشتیبانی نمی‌کند.
+        </video>
         <div class="container">
             <nav class="nav">
                 <div class="nav__wrapper center">
@@ -45,6 +49,27 @@
                     <div class="nav__logo"><img src="./Images/logo.png" class="nav__log-image"></div>
                 </div>
             </nav>
+            <div class="header-content">
+               
+                <div class="header-content__item">
+                    <div class="header-content__left">
+                        <p class="header-content__info">دارای بهترین خدمات و برترین خوراک ها</p>
+                        <div class="header-content__title">به میخواهم بخورم خوش آمدید رستوران برتر شما</div>
+                        <button class="header-content__button">در منوی ما جستجو کنید</button>
+                    </div>
+                    <div class="header-content__right">
+                        <div class="header-content__socials">
+                            <div class="header-content__social"><i class="fa-brands fa-facebook-f"></i></div>
+                            <div class="header-content__social"><i class="fa-brands fa-x-twitter"></i></div>
+                            <div class="header-content__social"><i class="fa-brands fa-instagram"></i></div>
+                            <div class="header-content__social"><i class="fa-brands fa-tiktok"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-content__line">
+                    <span class="header-content__dot"></span>
+                </div>
+            </div>
         </div>
     </header>
     <main class="main">
