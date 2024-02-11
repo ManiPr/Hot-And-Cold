@@ -16,6 +16,8 @@
     --bold-font:'JosefinSans-bold';
     --light-blue:#3bc8e7;
     --caption-color:#777777;
+    --input-bg:#1D1D1D;
+    --footer-bg:#111;
   }
   html {
   font-size: 62.5%; 
@@ -416,29 +418,79 @@
 
 
 .footer{
-
-  }
+  background-color: var(--footer-bg);
+  width: 60%;
+  border-radius: 1rem;
+  position: relative;
+  font-size: 1.3rem;
+}
 .footer__top{
-
-  } 
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+  gap: 25rem;
+} 
 .footer__subscribe{
+  gap: 5rem;
 
-  }
+}
 .footer__sub{
 
-  }
+}
 .footer__sub-inputs{
 
-  }
+}
 .footer__sub-input{
-
-  }
+    outline: none;
+    padding: 1.5rem 5.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: .3rem;
+    background-color:var(--input-bg);
+    color: var(--white);
+}
 .footer__sub-button{
+  background-color: var(--main-color);
+  color: var(--main-bg-color);
+  padding: 1.5rem 5.5rem;
+  border-radius: .3rem;
+  margin-right: 1rem;
+  cursor: pointer;
+  transition: all .5s ease;
+}
+.footer__sub-button:hover{
+  background-color: var(--white);
+  color: var(--main-color);
+  padding: 1.5rem 5.5rem;
+  border-radius: .3rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+.foooter__follow{
+  gap: 5rem;
 
-  }
-.footer__line1{
+}
+.footer__follow__title{
 
-  }
+}
+.footer__socials{
+  gap: .5rem;
+}
+.footer__social{
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: var(--input-bg);
+  width: 5rem;
+  height: 5rem;
+  border-radius: .3rem;
+  text-align: center;
+  cursor: pointer;
+  padding-top: 1.3rem;
+  transition: all .5s ease;
+}
+.footer__social:hover{
+  background-color: var(--white);
+  border-radius: 50%;
+}
+
 .footer__main{
 
   }
@@ -446,16 +498,17 @@
 
   }
 .footer__title{
-
+  color: var(--main-color);
   }
 .footer__description{
-
+  width: 53rem;
+  line-height: 3rem;
   }
 .footer__contact-info{
-
-  }
+  line-height: 3rem;
+ }
 .footer__opening-hours{
-
+  margin-right: 5rem;
   }
 .footer__week{
 
@@ -467,36 +520,24 @@
 
   }
 .footer__title-description{
-
+  color: var(--main-color);
+  cursor: pointer;
+  margin-top: 1rem;
   }
-.footer__line2{
 
-  }
+.footer__link{
+  transition: all .5s ease;
+}
+  .footer__link:hover{
+    color: var(--white);
+}
 
-.footer__bottom{
+.footer__weeks{
+  gap: 3rem;
+  margin-top: -.5rem;
+  margin-bottom: 3.5rem;
 
 }
-.footer-bottom-left{
-
-}
-.footer__copy-right{
-
-}
-.footer-bottom-right{
-
-}
-.footer__payment{
-
-}
-.footer__visa{
-
-}
-.footer__mastercard{
-
-}
-.footer__paypal{
-
-}
-.footer__chevrons-up{
-
+.footer__main {
+  border-bottom: 1px solid rgba(255,255,255,.1);
 }
