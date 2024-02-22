@@ -556,8 +556,9 @@ position: relative;
 
 
 
-
-
+.about-us__left{
+  background-image: url(../Images/7.jpg);
+}
 
 
 
@@ -568,12 +569,132 @@ position: relative;
 
 
 
+  /*
+  
+  ---------------------About Us--------------------
+  
+  */
 
 
+  .about-us {
+    background-color: var(--white);
+    width: 60%;
+    color: var(--main-bg-color);
+    border-radius: 1.5rem;
+    height: 60rem;
+    padding: 0 5rem;
+    position: relative;
+    z-index: -101;
+    margin-top: 2.6rem;
+  }
+
+  .container {}
+  
+  .about-us__wrapper {
+    justify-content: space-between;
+    gap: 10rem;
+    padding-top: 8rem;
+  }
+  .about-us__flower {
+    position: absolute;
+    width: 20rem;
+    right: -2rem;
+    top: -9rem;
+    height: 20rem;
+    z-index: -100;
+  }
+  .about-us__right {
+  }
+  
+  .about-us__titles {
+    line-height: .5rem;
+    border-bottom: dashed 2.5px var(--input-bg);
+    padding-bottom: 3rem;
+  }
+  
+  .about-us__title {
+    color: var(--main-color);
+  }
+  .about-us__title-big {
+    font-size: 2.5rem;
+  }
+  .about-us__descriptions {
+    line-height: 3rem;
+  }
+  
+  .about-us__q {
+    font-size: 10rem;
+    color: var(--main-color);
+  }
+  
+  .about-us__description {
+  }
+  
+  .about__us__main {}
+  
+  .abou-us__lists {
+    line-height: 3rem;
+    margin-right: -5rem;
+    margin-top: 2rem;
+    border-bottom: dashed 2.5px var(--input-bg);
+    padding-bottom: 3rem;
+  }
+  
+  .about-us__list {}
+
+  .about-us__readmore{
+      padding: 20px 35px;
+      background-color: var(--input-bg);
+      color: var(--main-color);
+      text-align: center;
+      margin-top: 3rem;
+      margin-right: -1rem;
+      border-radius: .5rem;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      font-size: 1.7rem;
+      box-shadow: 0px 10px 24px 0px rgba(12, 0, 46, .3);
+  }
+  
+  .about-us__readmore:hover{
+    padding: 18px 50px;
+    background-color: var(--main-color);
+    color:var(--input-bg) ;
+    text-align: center;
+    margin-top: 3rem;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+  .about-us__image {}
 
 
+  .about-us__left {}
+  
+  .about-us__search {}
+  
+  .about-us__search-link .fa {}
+  
+  .about-us__buttons {
+    
+  }
+  
+  .about-us__button {}
+  
+  .about-us__pagination {}
+  
+  .about-us__button-event {}
+  
+  .about-us__button-event .next .fa-solid .fa-chevron-right {}
+  
+  .about-us__button-event .perve .fa-solid .fa-chevron-left {}
+  
+  
 
-
+.icon-f{
+  font-size: 2.5rem;
+  margin-left: 1.5rem;
+}
 
 
 
