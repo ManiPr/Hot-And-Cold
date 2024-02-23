@@ -581,7 +581,7 @@ position: relative;
     width: 60%;
     color: var(--main-bg-color);
     border-radius: 1.5rem;
-    height: 60rem;
+    height: 80rem;
     padding: 0 5rem;
     position: relative;
     z-index: -101;
@@ -604,6 +604,8 @@ position: relative;
     z-index: -100;
   }
   .about-us__right {
+    width: 50%;
+
   }
   
   .about-us__titles {
@@ -634,13 +636,15 @@ position: relative;
   
   .abou-us__lists {
     line-height: 3rem;
-    margin-right: -5rem;
     margin-top: 2rem;
     border-bottom: dashed 2.5px var(--input-bg);
     padding-bottom: 3rem;
   }
   
-  .about-us__list {}
+  .about-us__list {
+    margin-right: -5rem;
+
+  }
 
   .about-us__readmore{
       padding: 20px 35px;
@@ -669,21 +673,51 @@ position: relative;
   .about-us__image {}
 
 
-  .about-us__left {}
-  
-  .about-us__search {}
-  
-  .about-us__search-link .fa {}
-  
-  .about-us__buttons {
-    
+  .about-us__left {
+  background-image: url(../Images/7.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 1rem;
+  z-index: -10;
+  width: 50%;
+  height: 60rem;
+  position: relative;
   }
   
-  .about-us__button {}
+  .about-us__search {
+    margin-top: 2rem;
+    margin-right: 3rem;
+  }
   
-  .about-us__pagination {}
+  .about-us__search-link .fa {
+    background: var(--footer-bg);
+    padding: 2rem;
+    border-radius: 50%;
+    color: var(--main-color);
+  }
   
-  .about-us__button-event {}
+  .about-us__buttons {
+    color: var(--main-color);
+    justify-content: space-between;
+    margin: 45rem 3rem;
+  }
+  
+  .about-us__button {
+    gap: 3rem;
+  }
+  
+  .about-us__pagination {
+    color: var(--white);
+    padding: .5rem;
+    border-radius: 100%;
+  }
+  
+  .about-us__button-event {
+    padding: 2rem;
+    border-radius: 50%;
+    background-color: var(--footer-bg);
+    color: var(--main-color);
+  }
   
   .about-us__button-event .next .fa-solid .fa-chevron-right {}
   
