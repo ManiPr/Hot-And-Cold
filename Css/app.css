@@ -737,6 +737,116 @@ margin-left: 1.5rem;
 
 
 
+
+/*
+
+---------------------Book Table--------------------
+
+*/
+
+
+
+.book-table{
+  background-color: var(--footer-bg);
+  width: 60%;
+  border-radius: 2rem;
+  height: 70rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+.book-table__titles{
+  padding-top: 3rem;
+}
+.book-table__title-top{
+  font-size: 2rem;
+  color: var(--main-color);
+}
+.book-table__title{
+  font-size: 3rem;
+}
+.book-table__dot{
+  position: relative;
+  width: 150px;
+  display: inline-block;
+  margin-top: 14px;
+}
+.book-table__dot span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--main-color);
+  display: inline-block;
+}
+.book-table__dot::after{
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 1px;
+  border-top: 1px dotted;
+  top: 50%;
+  margin-top: 1px;
+  left: 0;
+
+}
+.book-table__dot::before{
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 1px;
+  border-bottom: 1px dotted;
+  top: 50%;
+  margin-top: 1px;
+  right: 0;
+}
+.book-table__main{
+  gap: 1rem;
+  margin-top: 5rem;
+}
+.book-table__content{
+  background-color: var(--bg-color);
+  height: 38rem;
+  border-radius:1rem;
+  padding: 6rem 2rem 0 2rem;
+}
+.book-table__border{
+
+}
+.book-table__content-title{
+
+}
+.book-table__content-title-bottom{
+  color: var(--main-color);
+}
+.book-table__content-caption{
+  color:var(--white);
+  line-height: 3rem;
+  border-bottom: dotted 1px var(--white);
+  padding-bottom: 5rem;
+  width: 32.5rem;
+}
+.book-table__content-end{
+
+}
+.book-table__bottom{
+  text-align: center;
+  gap: 5rem;
+  color: var(--main-color);
+  margin-top: 4rem;
+  margin-right: 46rem;
+}
+.book-table__number{
+  color: var(--white);
+}
+
+.book-table__number-1{
+  padding-left: 1rem;
+}
+.book-table__number-2{
+  padding-right: 1rem;
+}
+.book-table__icon{
+  cursor: pointer;
+}
 /*
 
 ---------------------footer--------------------
