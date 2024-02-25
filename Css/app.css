@@ -1012,12 +1012,67 @@ width: 25%;
 
 
 
+/*
+
+---------------------Notes--------------------
+
+*/
 
 
 
 
 
+.section-note{
+  background-color: var(--footer-bg);
+  width: 60%;
+  height: 40rem;
+  border-radius: 1.5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  border: solid .1px rgba(255,255,255,.1);
 
+}
+.section-note__notes{
+  gap: 2rem;
+  padding-top: 3rem;
+ }
+.section-note__note{
+  background-color: var(--bg-color);
+  width: 80rem;
+  height: 35rem;
+  border-radius: 1.5rem;
+  border: solid .1px rgba(255,255,255,.1);
+  padding: 0 5rem;
+ }
+.section-note__top{
+  justify-content: space-between;
+}
+.section-note__number{
+  font-size: 2.5rem;
+  color: var(--caption-color);
+ }
+.section-note__main{
+  margin-top: 3rem;
+  border-bottom: solid 2px #ccccd1;
+  padding-bottom: 2rem;
+ }
+.section-note__title{
+
+ }
+.section-note__description{
+  line-height: 3rem;
+ }
+.section-note__bottom{
+
+ }
+.section-note__notif{
+    color: var(--main-color);
+    margin-top: 3rem;
+ }
+.section-note__icon{
+  color: var(--main-color);
+  font-size: 3.5rem;
+}
 
 
 
