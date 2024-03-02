@@ -1,0 +1,168 @@
+/* استایل کلی صفحه */
+.contact-us-page {
+    
+}
+
+.contact-us-main {
+   background-color: var(--white);
+   color: var(--main-bg-color);
+   width: 60%;
+   border-radius: 1.5rem;
+   height: 88rem;
+}
+
+.container {
+
+}
+.contact-us-section__wrapper{
+    padding: 0 1rem;
+    padding-top: 6rem;
+}
+
+/* استایل عنوان و توضیحات */
+.book-table__titles, .contact-us-section__detail-top {
+    z-index: 10;
+    position: relative;
+}
+
+.book-table__title-top, .contact-us-section__detail-top-title {
+    
+}
+
+.book-table__title {
+    
+}
+
+.contact-us-section__description{
+   width: 60rem;
+   line-height: 3rem;
+   border-bottom: dotted 3px #DDDDDD;
+   padding-bottom: 3rem;
+}
+
+/* استایل فرم تماس */
+.contact-us-section__form {
+   
+}
+.contact-us-section__inputs{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-gap: 1rem;
+    margin-top: 8rem;
+}
+.contact-us-section__input{
+    outline: none;
+    width: 30rem;
+    height: 6rem;
+    background-color: #F9F9F9;   
+    border: solid 1px #E1E1E1; 
+    margin-top: 2rem;
+    font-size: 1.6rem;
+}
+.contact-us-section__input-text-area{
+    outline: none;
+    background-color: #F9F9F9;   
+    border: solid 1px #E1E1E1; 
+    width: 61rem;
+    height: 13rem;
+    margin-top: 3rem;
+    font-size: 1.8rem;
+}
+.contact-us-section__input-text-area:focus{
+    background-color: var(--white);
+    box-shadow: 1px 1px 5px 0px rgba(12, 0, 46, .2);
+}
+
+.contact-us-section__input:focus{
+    background-color: var(--white);
+    box-shadow: 1px 1px 5px 0px rgba(12, 0, 46, .2);
+}
+
+.contact-us-section__button {
+   background-color: var(--main-bg-color);
+   width: 15rem;
+   height: 5rem;
+   margin-top: 5rem;
+   color: var(--main-color);
+   box-shadow: 0px 10px 24px 0px rgba(12, 0, 46, .3);
+   text-align: center;
+   padding-top: 1.4rem;
+   cursor: pointer;
+   transition: all  .5s ease;
+}
+.contact-us-section__button:hover {
+    background-color:var(--main-color);
+    color:  var(--main-bg-color);
+ }
+/* استایل بخش ساعات کاری */
+.contact-us-section__detail-top{
+    margin-top: 16rem;
+}
+.contact-us-section__detail-top-description{
+
+}
+.contact-us-section__detail-top-title{
+    color: var(--white);
+    font-size: 3rem;
+}
+.contact-us-section__detail-opening-times {
+   z-index: 10;
+   position: relative;
+   justify-content: space-between;
+   padding: 0 5rem;
+}
+
+.contact-us-section__deatail-opening-time {
+  color: var(--white);
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+.contact-us-section__phone-number {
+    color: var(--main-color);
+    position: relative;
+    z-index: 10;
+    direction: ltr;
+}
+
+.contact-us-section__left{
+    background: url(../Images/contact.jpg);
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: repeat;
+    background-origin: content-box;
+    width:43rem;
+    height: 60rem;
+    border-radius: 1.5rem;
+    margin-top: -15rem;
+    position: relative;
+    color: var(--main-color);
+    text-align: center;
+}
+.contact-us-section__left::after{
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background: rgba(2, 2, 2, .7);
+    border-radius: 10px;
+    z-index: 1;
+    border: 1px dashed rgba(255, 255, 255, .2);
+}
+.contact-us-section__right{
+    width: 10rem;
+    margin-top: -10rem;
+}
+.contact-us-section-main{
+    justify-content: space-between;
+}
+
+
+
+.contact-us-section__opening-week{
+    color: var(--main-color);
+}
