@@ -1,0 +1,126 @@
+.blog-page{
+    background-color: var(--white);
+    color: var(--main-bg-color);
+    width: 60%;
+    height: 250rem;
+    border-radius: 1.5rem;
+}
+.blog-page__wrapper{
+    padding: 10rem 5rem 0 5rem ;
+}
+.blog-page__top{
+    justify-content: space-between;
+    border: dashed 2px #ccccd1;
+    padding: 1rem 6rem 1rem 6rem;
+    margin: 0 1rem;
+}
+.blog-page__filters{
+    background-color: #222222;
+   width: 15rem;
+   height: 5rem;
+   color: var(--main-color);
+   box-shadow: 0px 10px 24px 0px rgba(12, 0, 46, .3);
+   text-align: center;
+   padding-top: 1.5rem;
+   cursor: pointer;
+   transition: all  .5s ease;
+   margin-top:2.3rem;
+}
+.blog-page__filters:hover{
+    background-color: var(--main-color);
+   width: 15rem;
+   height: 5rem;
+   color: #222222;
+   box-shadow: 0px 10px 24px 0px rgba(12, 0, 46, .3);
+   text-align: center;
+   padding-top: 1.5rem;
+   cursor: pointer;
+   transition: all  .5s ease;
+}
+.blog-page__inputs{
+
+}
+.blog-page__filter{
+    outline: none;
+    width: 37rem;
+    height: 5rem;
+    background-color: #F9F9F9;   
+    border: solid 1px #E1E1E1; 
+    margin-top: 2rem;
+    font-size: 1.6rem;
+}
+.blog-page__filter:focus{
+    background-color: var(--white);
+    box-shadow: 1px 1px 5px 0px rgba(12, 0, 46, .2);
+}
+.blog-page__icon{
+
+}
+.blog-page__blogs{
+margin-top: 5rem;
+display: grid;
+grid-template-columns: repeat(2,1fr);
+grid-gap: 2rem;
+margin-right: 5rem;
+}
+.blog-page__blog{
+    border: dashed 2px #ccccd1;
+    background-color: #F9F9F9;
+    width: 46rem;
+    border-radius: 1.5rem;
+    height: 70rem;
+}
+.blog-page__image-container{
+
+}
+.blog-page__image{
+    width: 46rem;
+    border-radius: 1.5rem;
+}
+.blog-page__content{
+    background-color: var(--white);
+    border: dashed 2px #ccccd1;
+    margin:4rem 2rem 0 2rem;
+    text-align: center;
+    height: 30rem;
+    border-radius: 1.5rem;
+}
+.blog-page__titles{
+
+}
+.blog-page__title{
+
+}
+.blog-page__caption{
+    color: var(--main-color);
+}
+.blog-page__date{
+
+}
+.blog-page___catagory{
+
+}
+.blog-page__tag{
+
+}
+.blog-page__description{
+    padding: 0 .5rem;
+    text-align: right;
+    line-height: 3rem;
+}
+.blog-page__button{
+    background-color: #222222;
+    height: 6rem;
+    border-bottom-left-radius:1.5rem;
+    border-bottom-right-radius:1.5rem;
+    color: var(--main-color);
+    font-size: 2rem;
+    margin-top: 7rem;
+    padding-top: 2rem;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+.blog-page__button:hover{
+    background-color: var(--main-color);
+    color: #222222;
+}
