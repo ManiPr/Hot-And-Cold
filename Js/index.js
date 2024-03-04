@@ -1,21 +1,27 @@
-let headerElem=document.getElementsByClassName('header');
+document.addEventListener('DOMContentLoaded', function () {
+  const imageElem = document.querySelector('.header-background-image'); 
+  let imageArray = ['./Images/bg-image/bg1.jpg', './Images/bg-image/bg2.jpg', './Images/bg-image/bg3.jpg'];
+  let currentIndex = 0;
 
-let imageArray=['bg1.jpg','bg2.jpg','bg3.jpg'];
-let currentIndex=0;
-const changedImage=()=>{
-    if(headerElem.length > 0){
-        for (let i = 0; i < headerElem.length; i++) {
-            headerElem[i].style.backgroundImage = `url(../Images/bg-image/${imageArray[currentIndex]})`;
-          }
-          currentIndex++;
-    if (currentIndex >= imageArray.length) {
-      currentIndex = 0;
-    }
-    }
-    console.log(headerElem[0].style.backgroundImage);
+  const changeImage = () => {
+      currentIndex++;
+      if (currentIndex >= imageArray.length) {
+          currentIndex = 0;
+      }
+      
+      imageElem.style.opacity = 0;
 
-}
-setInterval(changedImage, 5000);
+      setTimeout(() => {
+          imageElem.src = imageArray[currentIndex];
+          imageElem.onload = () => {
+              imageElem.style.opacity = 1;
+          };
+      }, 2000);
+  };
 
-console.log(headerElem);
-document.write(headerElem);
+  window.onload = () => {
+      imageElem.style.opacity = 1;
+  };
+
+  setInterval(changeImage, 6000);
+});
