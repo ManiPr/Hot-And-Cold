@@ -1,3 +1,6 @@
+const menus=document.querySelectorAll('.special-select__menus')
+const categories=document.querySelectorAll('.special-select__category')
+const icons=document.querySelectorAll('.special-select__icon')
 document.addEventListener('DOMContentLoaded', function () {
   const imageElem = document.querySelector('.header-background-image'); 
   let imageArray = [ './Images/bg-image/bg2.jpg', './Images/bg-image/bg3.jpg'];
@@ -24,6 +27,24 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   setInterval(changeImage, 4000);
+  
+menus.forEach((menu)=>{
+    console.log(menu);
+})
+
+categories.forEach((category)=>{
+    category.addEventListener('click',function(){
+        this.classList.add('special-select__category--active')
+    })
+})
+icons.forEach((icon)=>{
+    icon.addEventListener('click',function(){
+        console.log(icon);
+        this.classList.add('special-select__category--active')
+    })
+})
+
+
 });
 
 
@@ -31,33 +52,41 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-document.addEventListener("DOMContentLoaded", function() {
-  let index = 0; // شاخص فعلی اسلایدر
-  const itemsToShow = 3; // تعداد آیتم‌هایی که باید نشان داده شود
-  const slider = document.getElementById('slider');
-  const totalItems = slider.children.length; // تعداد کل آیتم‌ها
+// document.addEventListener("DOMContentLoaded", function() {
+//   let index = 0; // شاخص فعلی اسلایدر
+//   const itemsToShow = 3; // تعداد آیتم‌هایی که باید نشان داده شود
+//   const slider = document.getElementById('slider');
+//   const totalItems = slider.children.length; // تعداد کل آیتم‌ها
 
-  // نمایش آیتم‌های اولیه
-  updateDisplay();
+//   // نمایش آیتم‌های اولیه
+//   updateDisplay();
 
-  // تابع برای حرکت دادن اسلایدر
-  window.moveSlide = function(step) {
-      index += step;
+//   // تابع برای حرکت دادن اسلایدر
+//   window.moveSlide = function(step) {
+//       index += step;
 
-      // اطمینان از اینکه اسلایدر در محدوده مجاز حرکت می‌کند
-      if (index < 0) {
-          index = 0;
-      } else if (index + itemsToShow > totalItems) {
-          index = totalItems - itemsToShow;
-      }
+//       // اطمینان از اینکه اسلایدر در محدوده مجاز حرکت می‌کند
+//       if (index < 0) {
+//           index = 0;
+//       } else if (index + itemsToShow > totalItems) {
+//           index = totalItems - itemsToShow;
+//       }
 
-      updateDisplay();
-  };
+//       updateDisplay();
+//   };
 
-  // تابع برای بروزرسانی نمایش اسلایدر
-  function updateDisplay() {
-      for (let i = 0; i < totalItems; i++) {
-          slider.children[i].style.display = (i >= index && i < index + itemsToShow) ? 'block' : 'none';
-      }
-  }
-});
+//   // تابع برای بروزرسانی نمایش اسلایدر
+//   function updateDisplay() {
+//       for (let i = 0; i < totalItems; i++) {
+//           slider.children[i].style.display = (i >= index && i < index + itemsToShow) ? 'block' : 'none';
+//       }
+//   }
+// });
+
+
+
+
+
+
+
+
