@@ -28,21 +28,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
   setInterval(changeImage, 4000);
   
-menus.forEach((menu)=>{
-    console.log(menu);
-})
 
 categories.forEach((category)=>{
     category.addEventListener('click',function(){
-        this.classList.add('special-select__category--active')
+        categories.forEach((cat)=>{
+            cat.classList.remove('special-select__category--active');
+        });
+        menus.forEach((menu)=>{
+            menu.classList.remove('special-select__menus--show')
+        })
+         this.classList.add('special-select__category--active');
+         let contentId = this.getAttribute('data-content-id')
+         console.log(contentId);
+         console.log(document.getElementById(contentId).classList.add('special-select__menus--show'));
     })
 })
-icons.forEach((icon)=>{
-    icon.addEventListener('click',function(){
-        console.log(icon);
-        this.classList.add('special-select__category--active')
-    })
-})
+
 
 
 });
