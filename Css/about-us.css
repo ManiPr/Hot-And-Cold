@@ -109,7 +109,7 @@
     background-color: var(--white);
     color: var(--main-bg-color);
     border-radius: 1.5rem;
-    height: 77rem;
+    height: 100rem;
 }
 .section-gallery__wrapper{
     text-align: center;
@@ -129,6 +129,9 @@
     cursor: pointer;
     transition: all .5s ease;
 }
+.section-gallery__gallery-name--active{
+    color: var(--main-color);
+}
 .section-gallery__gallery-name:hover{
     color: var(--main-color);
 }
@@ -136,10 +139,15 @@
 
 }
 .section-gallery__images{
-    gap: 3rem;
+  display: none;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(2,1fr);
+}
+.section-gallery__images--show{
+    display: grid;
 }
 .section-gallery__container-image{
-
+    margin-top: 1rem;
 }
 .section-gallery__image{
     width: 35rem;

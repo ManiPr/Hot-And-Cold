@@ -3,7 +3,8 @@ const sectionNumberCup = $.querySelector("#section-number__cup");
 const sectionNumberWeek = $.querySelector("#section-number__week");
 const sectionNumerGuest = $.querySelector("#section-numer__guest");
 const sectionNumberView = $.querySelector("#section-number__view");
-
+const sectionGalleryGalleryName=$.querySelectorAll('.section-gallery__gallery-name');
+const sectionGalleryImages=$.querySelectorAll('.section-gallery__images')
 window.addEventListener("load", () => {
     makeCounter(172, sectionNumberWeek);
     makeCounter(38, sectionNumberCup);
@@ -22,4 +23,19 @@ function makeCounter(max, elem) {
       counter++;
     }, 1);
   }
-  
+
+  sectionGalleryGalleryName.forEach((section)=>{
+    section.addEventListener('click',function(){
+      sectionGalleryGalleryName.forEach((cat)=>{
+            cat.classList.remove('section-gallery__gallery-name--active');
+        });
+        sectionGalleryImages.forEach((sec)=>{
+          sec.classList.remove('section-gallery__images--show')
+        })
+        console.log(this);
+         this.classList.add('section-gallery__gallery-name--active');
+         let contentId = this.getAttribute('data-content-id')
+         console.log(contentId);
+         console.log(document.getElementById(contentId).classList.add('section-gallery__images--show'));
+    })
+})
