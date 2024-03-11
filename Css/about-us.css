@@ -295,6 +295,9 @@
 .section-team__team{
 
 }
+.section-team__team:hover .section-team__detail {
+    opacity: 1;
+}
 .section-team__team-top{
 
 }
@@ -310,6 +313,8 @@
     margin-right: -28rem;
     margin-top: -5rem;
     z-index: 3;
+    opacity: 0;
+    transition: all .5s ease;
 }
 .section-team__title{
 
