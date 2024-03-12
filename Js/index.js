@@ -1,11 +1,12 @@
 const menus=document.querySelectorAll('.special-select__menus')
 const categories=document.querySelectorAll('.special-select__category')
 const icons=document.querySelectorAll('.special-select__icon')
+const menuIcon=document.querySelector('.nav__icon-f')
 document.addEventListener('DOMContentLoaded', function () {
   const imageElem = document.querySelector('.header-background-image'); 
   let imageArray = [ './Images/bg-image/bg2.jpg', './Images/bg-image/bg3.jpg'];
   let currentIndex = 0;
-
+  let flag=false;
   const changeImage = () => {
       currentIndex++;
       if (currentIndex >= imageArray.length) {
@@ -44,6 +45,20 @@ categories.forEach((category)=>{
     })
 })
 
+menuIcon.addEventListener('click',()=>{
+        if(flag==='false'){
+            this.classList.remove('fa-solid fa-x')
+            this.classList.add('fa-solid fa-bars')
+            flag=true;
+        }
+        else{
+            this.classList.remove('fa-solid fa-bars')
+            this.classList.add('fa-solid fa-x')
+            flag=false;
+        }
+       
+
+    })
 
 
 });
