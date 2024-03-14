@@ -1412,6 +1412,11 @@ border-bottom: 1px solid rgba(255,255,255,.1);
   right:5rem;
   z-index: 99999999999999999999;
   border: solid var(--bg-color) 4px;
+  opacity: 0;
+  transition: all .5s ease;
+}
+.menu-static--show{
+  opacity: 1;
 }
 .menu-static__lists{
   gap: 6rem;

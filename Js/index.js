@@ -2,6 +2,7 @@ const menus=document.querySelectorAll('.special-select__menus')
 const categories=document.querySelectorAll('.special-select__category')
 const icons=document.querySelectorAll('.special-select__icon')
 const menuIcon=document.querySelector('.nav__icon-f')
+const menuStatic=document.querySelector('.menu-static')
 document.addEventListener('DOMContentLoaded', function () {
   const imageElem = document.querySelector('.header-background-image'); 
   let imageArray = [ './Images/bg-image/bg2.jpg', './Images/bg-image/bg3.jpg'];
@@ -46,16 +47,18 @@ categories.forEach((category)=>{
 })
 
 menuIcon.addEventListener('click',()=>{
-        if(flag==='false'){
-            this.classList.remove('fa-solid fa-x')
-            this.classList.add('fa-solid fa-bars')
-            flag=true;
-        }
-        else{
-            this.classList.remove('fa-solid fa-bars')
-            this.classList.add('fa-solid fa-x')
-            flag=false;
-        }
+            console.log('مانی');
+            if (!flag) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark'); 
+                menuStatic.classList.add('menu-static--show')
+                flag = true;
+            } else {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+                menuStatic.classList.remove('menu-static--show')
+                flag = false;
+            }
        
 
     })
