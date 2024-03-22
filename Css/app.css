@@ -849,6 +849,16 @@ margin-left: 1.5rem;
 .book-table__main{
   gap: 1rem;
   margin-top: 5rem;
+  overflow: hidden;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) - 12px);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  border-radius: 8px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
 }
 .book-table__content{
   background-color: var(--bg-color);
@@ -1408,15 +1418,14 @@ border-bottom: 1px solid rgba(255,255,255,.1);
   text-align: center;
   border-radius: 1.5rem;
   position: fixed;
-  top: 15rem;
+  top: -95rem;
   right:5rem;
   z-index: 99999999999999999999;
   border: solid var(--bg-color) 4px;
-  opacity: 0;
-  transition: all .5s ease;
+  transition: all 1s ease;
 }
 .menu-static--show{
-  opacity: 1;
+  top: 15rem;
 }
 .menu-static__lists{
   gap: 6rem;
