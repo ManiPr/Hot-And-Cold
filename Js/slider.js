@@ -25,21 +25,31 @@ arrowBtns.forEach(btn => {
     });
 });
 
-const infiniteScroll = () => {
-    // If the carousel is at the beginning, scroll to the end
-    if(bookTable__main.scrollLeft === 0) {
-        bookTable__main.classList.add("no-transition");
-        bookTable__main.scrollLeft = bookTable__main.scrollWidth - (2 * bookTable__main.offsetWidth);
-        bookTable__main.classList.remove("no-transition");
-    }
-    // If the carousel is at the end, scroll to the beginning
-    else if(Math.ceil(bookTable__main.scrollLeft) === bookTable__main.scrollWidth - bookTable__main.offsetWidth) {
-        bookTable__main.classList.add("no-transition");
-        bookTable__main.scrollLeft = bookTable__main.offsetWidth;
-        bookTable__main.classList.remove("no-transition");
-    }
 
-    // Clear existing timeout & start autoplay if mouse is not hovering over carousel
-    clearTimeout(timeoutId);
-    if(!wrapper.matches(":hover")) autoPlay();
+
+const dragStart = (e) => {
+    isDragging = true;
+    bookTable__main.classList.add("dragging");
+    // Records the initial cursor and scroll position of the carousel
+    startX = e.pageX;
+    startScrollLeft = bookTable__main.scrollLeft;
 }
+
+const dragging = (e) => {
+    if(!isDragging) return; // if isDragging is false return from here
+    // Updates the scroll position of the carousel based on the cursor movement
+    bookTable__main.scrollLeft = startScrollLeft - (e.pageX - startX);
+}
+
+const dragStop = () => {
+    isDragging = false;
+    bookTable__main.classList.remove("dragging");
+}
+
+
+bookTable__main.addEventListener("mousedown", dragStart);
+bookTable__main.addEventListener("mousemove", dragging);
+document.addEventListener("mouseup", dragStop);
+bookTable__main.addEventListener("scroll", infiniteScroll);
+wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
+wrapper.addEventListener("mouseleave", autoPlay);
