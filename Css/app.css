@@ -723,7 +723,17 @@ width: 50%;
 height: 60rem;
 position: relative;
 }
-
+.about-us__left::after{
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  opacity: 50%;
+  border-radius: 1.2rem;
+}
 .about-us__search {
   margin-top: 2rem;
   margin-right: 3rem;
