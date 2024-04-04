@@ -1493,13 +1493,23 @@ border-bottom: 1px solid rgba(255,255,255,.1);
 
 
 .swiper-button-prev{
-  margin-right: -1.5rem;
+  margin-right: -1.3rem;
   color:var(--main-color);
-  margin-top: .1rem;
+  margin-top: 1rem;
+  margin-top: -.5rem;
+
 }
 .swiper-button-next{
-  margin-left: -1.5 rem;
+  margin-left: -1.3rem;
   size: 1rem;
   color:var(--main-color);
-  margin-top: .1rem;
+  margin-top: -.5rem;
+
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+  font-size: 2.5rem; 
+}
+.swiper2{
+  margin-top: 6rem;
 }
