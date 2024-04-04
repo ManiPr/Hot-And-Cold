@@ -1232,7 +1232,7 @@ width: 25%;
   background-color: var(--white);
   border:dashed 2px #ccccd1;
   margin-top: 3rem;
-  height: 25rem;
+  height: 27rem;
 }
 .section-comment__image-container{
 }
@@ -1492,3 +1492,14 @@ border-bottom: 1px solid rgba(255,255,255,.1);
 }
 
 
+.swiper-button-prev{
+  margin-right: -1.5rem;
+  color:var(--main-color);
+  margin-top: .1rem;
+}
+.swiper-button-next{
+  margin-left: -1.5 rem;
+  size: 1rem;
+  color:var(--main-color);
+  margin-top: .1rem;
+}
