@@ -1,0 +1,45 @@
+.table__button{
+    position: absolute;
+    background-color: black;
+    top: 43rem;
+    left: 25rem;
+    color: var(--main-color);
+    padding: 1.5rem 4rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+.table__button:hover{
+    background-color:var(--main-color);
+    color:black;
+}
+.table__form{
+    position: relative;
+}
+.table__right{
+    flex-direction: column;
+    margin-top: -10rem;
+}
+.book-table__titles{
+    text-align: center;
+}
+.table{
+    position: fixed;
+    background-color: white;
+    top: 10rem;
+    left: 35rem;
+    width: 120rem;
+    border-radius: 1.5rem;
+    color: black;
+    height: 60rem;
+}
+.table__wrapper {
+    justify-content: space-between;
+}
+.table__form {
+    margin-top: -9rem;
+  margin-right: 2rem;
+}
+.contact-us-section__left{
+ margin-top: 0 !important;
+}
