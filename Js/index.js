@@ -3,11 +3,27 @@ const categories=document.querySelectorAll('.special-select__category')
 const icons=document.querySelectorAll('.special-select__icon')
 const menuIcon=document.querySelector('.nav__icon-f')
 const menuStatic=document.querySelector('.menu-static')
+const headerCart=document.querySelector('.header__cart')
+const navShoppingCart=document.querySelector('.nav__shopping-cart')
 document.addEventListener('DOMContentLoaded', function () {
   const imageElem = document.querySelector('.header-background-image'); 
   let imageArray = [ './Images/bg-image/bg2.jpg', './Images/bg-image/bg3.jpg'];
   let currentIndex = 0;
   let flag=false;
+  let flag2=true;
+  navShoppingCart.addEventListener('click',()=>{
+    if(flag2){
+        headerCart.classList.add('cart-now')
+        headerCart.classList.add('cart-index')       
+        flag2=false;
+    }
+    else{
+        headerCart.classList.remove('cart-now')
+        headerCart.classList.remove('cart-index')
+        flag2=true;
+    }
+})
+
   const changeImage = () => {
       currentIndex++;
       if (currentIndex >= imageArray.length) {
@@ -59,60 +75,13 @@ menuIcon.addEventListener('click',()=>{
                 menuStatic.classList.remove('menu-static--show')
                 flag = false;
             }
+
        
 
     })
 
 
 });
-
-
-
-var swiper = new Swiper(".mySwiper", {
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
-
-
-
-
-
-// document.addEventListener("DOMContentLoaded", function() {
-//   let index = 0; // شاخص فعلی اسلایدر
-//   const itemsToShow = 3; // تعداد آیتم‌هایی که باید نشان داده شود
-//   const slider = document.getElementById('slider');
-//   const totalItems = slider.children.length; // تعداد کل آیتم‌ها
-
-//   // نمایش آیتم‌های اولیه
-//   updateDisplay();
-
-//   // تابع برای حرکت دادن اسلایدر
-//   window.moveSlide = function(step) {
-//       index += step;
-
-//       // اطمینان از اینکه اسلایدر در محدوده مجاز حرکت می‌کند
-//       if (index < 0) {
-//           index = 0;
-//       } else if (index + itemsToShow > totalItems) {
-//           index = totalItems - itemsToShow;
-//       }
-
-//       updateDisplay();
-//   };
-
-//   // تابع برای بروزرسانی نمایش اسلایدر
-//   function updateDisplay() {
-//       for (let i = 0; i < totalItems; i++) {
-//           slider.children[i].style.display = (i >= index && i < index + itemsToShow) ? 'block' : 'none';
-//       }
-//   }
-// });
-
-
-
-
 
 
 
