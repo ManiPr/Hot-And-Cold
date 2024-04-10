@@ -26,12 +26,16 @@
 .table{
     position: fixed;
     background-color: white;
-    top: 10rem;
+    top: 15rem;
     left: 35rem;
     width: 120rem;
     border-radius: 1.5rem;
     color: black;
     height: 60rem;
+    z-index: -9999999999999999;
+    box-shadow: 0 10px 14px 10000px rgba(0,0,0, .3);
+    opacity: 0;
+    transition: all .5s ease-in-out;
 }
 .table__wrapper {
     justify-content: space-between;
@@ -42,4 +46,9 @@
 }
 .contact-us-section__left{
  margin-top: 0 !important;
+}
+.table__icon{
+    cursor:pointer;
+    margin-right: 2rem;
+    position:absolute;
 }

@@ -5,12 +5,17 @@ const menuIcon=document.querySelector('.nav__icon-f')
 const menuStatic=document.querySelector('.menu-static')
 const headerCart=document.querySelector('.header__cart')
 const navShoppingCart=document.querySelector('.nav__shopping-cart')
+const navBook=document.querySelector('.nav__book')
+const table=document.querySelector('.table')
+const body=document.querySelector('body')
+const tableIcon=document.querySelector('.table__icon')
 document.addEventListener('DOMContentLoaded', function () {
   const imageElem = document.querySelector('.header-background-image'); 
   let imageArray = [ './Images/bg-image/bg2.jpg', './Images/bg-image/bg3.jpg'];
   let currentIndex = 0;
   let flag=false;
   let flag2=true;
+  let flag3=true;
   navShoppingCart.addEventListener('click',()=>{
     if(flag2){
         headerCart.classList.add('cart-now')
@@ -23,7 +28,23 @@ document.addEventListener('DOMContentLoaded', function () {
         flag2=true;
     }
 })
-
+navBook.addEventListener('click',()=>{
+    console.log('دورود');
+    if(flag2){
+        table.classList.add('cart-now')
+        table.classList.add('cart-index')
+        body.style.pointerEvents='none';   
+        table.style.pointerEvents='all'    
+        flag2=false;
+    }
+  })
+  tableIcon.addEventListener('click',()=>{
+    console.log('click');
+    table.classList.remove('cart-now')
+    table.classList.remove('cart-index')
+    body.style.pointerEvents='all';   
+    flag2=true;
+  })
   const changeImage = () => {
       currentIndex++;
       if (currentIndex >= imageArray.length) {
