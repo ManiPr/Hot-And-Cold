@@ -1,3 +1,6 @@
+
+
+
 const menus=document.querySelectorAll('.special-select__menus')
 const categories=document.querySelectorAll('.special-select__category')
 const icons=document.querySelectorAll('.special-select__icon')
@@ -9,6 +12,12 @@ const navBook=document.querySelector('.nav__book')
 const table=document.querySelector('.table')
 const body=document.querySelector('body')
 const tableIcon=document.querySelector('.table__icon')
+const nameInput=document.querySelector('#name')
+const familyInpnameInput=document.querySelector('#family')
+const phoneInpnameInput=document.querySelector('#phone')
+const emailInpnameInput=document.querySelector('#email')
+const descriptionInput=document.querySelector('#description')
+const tableButton=document.querySelector('.table__button')
 document.addEventListener('DOMContentLoaded', function () {
   const imageElem = document.querySelector('.header-background-image'); 
   let imageArray = [ './Images/bg-image/bg2.jpg', './Images/bg-image/bg3.jpg'];
@@ -16,6 +25,31 @@ document.addEventListener('DOMContentLoaded', function () {
   let flag=false;
   let flag2=true;
   let flag3=true;
+  let tables=[];
+    console.log(nameInput.innerHTML);
+  const newTable = {
+    name: nameInput.value,
+    username: familyInpnameInput.value.trim(),
+    email: phoneInpnameInput.value.trim(),
+    phone: emailInpnameInput.value.trim(),
+    description: descriptionInput.value.trim()
+  };
+
+  tableButton.addEventListener('click',(e)=>{
+    e.preventDefault()
+    console.log(tables);
+    tables.push(newTable)
+    console.log(newTable);
+    localStorage.setItem('table',JSON.stringify(tables));
+    nameInput.value=''
+    familyInpnameInput.value=''
+    phoneInpnameInput.value=''
+    emailInpnameInput.value=''
+    descriptionInput.value=''
+
+  })
+
+
   navShoppingCart.addEventListener('click',()=>{
     if(flag2){
         headerCart.classList.add('cart-now')
@@ -39,7 +73,6 @@ navBook.addEventListener('click',()=>{
     }
   })
   tableIcon.addEventListener('click',()=>{
-    console.log('click');
     table.classList.remove('cart-now')
     table.classList.remove('cart-index')
     body.style.pointerEvents='all';   
