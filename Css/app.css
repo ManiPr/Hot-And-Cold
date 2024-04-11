@@ -56,8 +56,12 @@ color: var(--white)
 */
 a {
 text-decoration: none;
+color:black;
 }
-
+a {
+  text-decoration: none;
+  color:var(--main-color);
+  }
 ul {
 list-style-type: none;
 padding-left: 0;
