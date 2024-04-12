@@ -124,3 +124,57 @@ margin-right: 5rem;
     background-color: var(--main-color);
     color: #222222;
 }
+
+
+
+
+
+
+
+
+
+.blog-page__top-bar{
+    background-color: #222222;
+    color: var(--white);
+    text-align: center;
+    width: 35rem;
+  height: 22rem;
+  padding: 1rem;
+  position: absolute;
+  opacity: 0;
+}
+.blog-page__top-bar-wrapper{
+    background-color: #191919;
+    text-align: center;
+    height: 20rem;
+    border-radius: 1.5rem;
+    border: dashed 1px #474747;
+}
+.blog-page__contents{
+    gap: 5rem;
+
+}
+.blog-page__content-list__titles{
+    gap: 6rem;
+    margin-right: 3rem;
+}
+.blog-page__content-list-title{
+    border-bottom: dashed 1px var(--main-color);
+    padding-bottom: 1rem;
+}
+.blog-page__content-lists{
+    flex-direction: column;
+    gap: 2rem;
+}
+.blog-page__content-list{
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+
+.blog-page__content-list:hover{
+    color: var(--main-color);
+}
+
+
+
+

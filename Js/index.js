@@ -18,7 +18,8 @@ const phoneInpnameInput=document.querySelector('#phone')
 const emailInpnameInput=document.querySelector('#email')
 const descriptionInput=document.querySelector('#description')
 const tableButton=document.querySelector('.table__button')
-document.addEventListener('DOMContentLoaded', function () {
+const blogPageFilters=document.querySelector('.blog-page__filters')
+const blogPageTopBar=document.querySelector('.blog-page__top-bar')
   const imageElem = document.querySelector('.header-background-image'); 
   let imageArray = [ './Images/bg-image/bg2.jpg', './Images/bg-image/bg3.jpg'];
   let currentIndex = 0;
@@ -26,9 +27,8 @@ document.addEventListener('DOMContentLoaded', function () {
   let flag2=true;
   let flag3=true;
   let tables=[];
-    console.log(nameInput.innerHTML);
   const newTable = {
-    name: nameInput.value,
+    name: nameInput.value.trim(),
     username: familyInpnameInput.value.trim(),
     email: phoneInpnameInput.value.trim(),
     phone: emailInpnameInput.value.trim(),
@@ -49,8 +49,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   })
 
+ 
 
-  navShoppingCart.addEventListener('click',()=>{
+
+navShoppingCart.addEventListener('click',()=>{
     if(flag2){
         headerCart.classList.add('cart-now')
         headerCart.classList.add('cart-index')       
@@ -97,10 +99,7 @@ navBook.addEventListener('click',()=>{
   window.onload = () => {
       imageElem.style.opacity = 1;
   };
-
   setInterval(changeImage, 4000);
-  
-
 categories.forEach((category)=>{
     category.addEventListener('click',function(){
         categories.forEach((cat)=>{
@@ -133,9 +132,6 @@ menuIcon.addEventListener('click',()=>{
        
 
     })
-
-
-});
 
 
 
