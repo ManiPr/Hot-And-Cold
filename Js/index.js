@@ -18,7 +18,6 @@ const phoneInpnameInput=document.querySelector('#phone')
 const emailInpnameInput=document.querySelector('#email')
 const descriptionInput=document.querySelector('#description')
 const tableButton=document.querySelector('.table__button')
-const blogPageFilters=document.querySelector('.blog-page__filters')
 const blogPageTopBar=document.querySelector('.blog-page__top-bar')
   const imageElem = document.querySelector('.header-background-image'); 
   let imageArray = [ './Images/bg-image/bg2.jpg', './Images/bg-image/bg3.jpg'];
@@ -49,20 +48,12 @@ const blogPageTopBar=document.querySelector('.blog-page__top-bar')
 
   })
 
- 
-
+  blogPageFilters.addEventListener('click',()=>{
+    console.log('خانه');
+  })
 
 navShoppingCart.addEventListener('click',()=>{
-    if(flag2){
-        headerCart.classList.add('cart-now')
-        headerCart.classList.add('cart-index')       
-        flag2=false;
-    }
-    else{
-        headerCart.classList.remove('cart-now')
-        headerCart.classList.remove('cart-index')
-        flag2=true;
-    }
+   
 })
 navBook.addEventListener('click',()=>{
     console.log('دورود');

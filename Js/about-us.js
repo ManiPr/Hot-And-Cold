@@ -32,10 +32,7 @@ function makeCounter(max, elem) {
         sectionGalleryImages.forEach((sec)=>{
           sec.classList.remove('section-gallery__images--show')
         })
-        console.log(this);
          this.classList.add('section-gallery__gallery-name--active');
          let contentId = this.getAttribute('data-content-id')
-         console.log(contentId);
-         console.log(document.getElementById(contentId).classList.add('section-gallery__images--show'));
     })
 })
