@@ -2,7 +2,7 @@
     background-color: var(--white);
     color: var(--main-bg-color);
     width: 60%;
-    height: 250rem;
+    max-height: 165rem;
     border-radius: 1.5rem;
 }
 .blog-page__wrapper{
@@ -69,6 +69,7 @@ margin-right: 5rem;
     width: 46rem;
     border-radius: 1.5rem;
     height: 70rem;
+    box-shadow: 0px 10px 24px 0px rgba(12, 0, 46, .3);
 }
 .blog-page__image-container{
 
@@ -179,4 +180,26 @@ margin-right: 5rem;
 
 
 
+.blog-page__paginations{
+    gap: 4rem;
+    position: absolute;
+    right: 45rem;
+}
+.blog-page__pagination{
+    color: var(--main-color);
+    background: var(--main-bg-color);
+    padding: 2rem 2.3rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+.blog-page__pagination:hover  {
+    color: var(--main-bg-color);
+    background: var(--main-color);
+ 
+}
 
+.blog-page__pagination--active{
+    color: var(--main-bg-color);
+    background: var(--main-color);
+}
