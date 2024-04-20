@@ -173,8 +173,15 @@
     transition: all .5s ease;
 }
 .section-galllery__button:hover  {
+    background-color:black;
+    background-color:var(--main-color);
+}
+.section-galllery__button:hover .section-gallery__button-link {
     color: var(--footer-bg);
-    background-color: var(--main-color);
+}
+.section-gallery__button-link{
+    color: var(--main-color);
+    transition: all .5s ease;
 }
 .section-gallery__icon{
    color: var(--main-color);
