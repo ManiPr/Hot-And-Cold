@@ -19,7 +19,8 @@ const emailInpnameInput=document.querySelector('#email')
 const descriptionInput=document.querySelector('#description')
 const tableButton=document.querySelector('.table__button')
 const blogPageTopBar=document.querySelector('.blog-page__top-bar')
-  const imageElem = document.querySelector('.header-background-image'); 
+const imageElem = document.querySelector('.header-background-image');
+const specialMenuButton=document.querySelectorAll('.special-menu__button') 
   let imageArray = [ './Images/bg-image/bg2.jpg', './Images/bg-image/bg3.jpg'];
   let currentIndex = 0;
   let flag=false;
@@ -33,7 +34,12 @@ const blogPageTopBar=document.querySelector('.blog-page__top-bar')
     phone: emailInpnameInput.value.trim(),
     description: descriptionInput.value.trim()
   };
-
+  specialMenuButton.forEach((menu)=>{
+    menu.addEventListener('click',()=>{
+      console.log('بسنیتبمسیبت');  
+    })
+  })
+  
   tableButton.addEventListener('click',(e)=>{
     e.preventDefault()
     console.log(tables);
@@ -123,7 +129,6 @@ menuIcon.addEventListener('click',()=>{
        
 
     })
-
 
 
 

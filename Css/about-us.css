@@ -400,3 +400,55 @@
 .section-comment__star{
 
 }
+.section-gallery__big-container-image{
+    position: fixed;
+    top: 25rem;
+    left: 80rem;
+    z-index: -9999999999999999;
+    opacity:  0;
+    transition: all .5s ease-in-out;
+
+}
+.sectoin-gallery__big-image{
+  background-color: white;
+  width: 80rem;
+  color: black;
+  height: 40rem;
+  transition: all .5s ease-in-out;
+  background-size: cover;
+  background-position: center;
+}
+.section-gallery__big-container-image-on{
+    z-index: 999999999999999999;
+    opacity: 1;
+}
+.about-us-page__shadow{
+top: 12px;
+  left: 3px;
+  position: absolute;
+  background-color: #000;
+  z-index: -99999999999;
+  width: 100%;
+  height: 360%;
+  opacity: 0;
+  transition: all .5s ease-in-out;
+}
+.about-us-page__shadow-on{
+  z-index: 99999999999 !important;
+  opacity: 50% !important;
+}
+.section-gallery__big{
+    position: relative;
+}
+.section-gallery__icon__wrapper{
+    position: relative;
+}
+.section-gallery__icon-f{
+    position: absolute;
+    top: 40px; 
+    right: 40px;  
+    font-size: 2rem;  
+    color: white;  
+    cursor: pointer;  
+    z-index: 100;  
+}
