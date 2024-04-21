@@ -28,7 +28,6 @@ blogPageContentList.forEach(blog=>{
                 item.classList.remove('blog-block')
             }
         })
-        console.log('fsdfsd');
     })
 })
 
@@ -99,7 +98,7 @@ const coursesPaginationWrapper = document.querySelector(
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(key);
   };
-  const currentPage = getUrlParam("page");
+  const currentPage = getUrlParam("page") || 1;  
   const realData=paginateItems([...blogData], 3, coursesPaginationWrapper, currentPage)
 
   

@@ -134,17 +134,18 @@ margin-right: 5rem;
 
 
 
-
+.blog-page__top{
+}
 
 .blog-page__top-bar{
     background-color: #222222;
     color: var(--white);
     text-align: center;
     width: 35rem;
-  height: 22rem;
-  padding: 1rem;
-  position: absolute;
-  opacity: 0;
+    height: 22rem;
+    padding: 1rem;
+    position: absolute;
+    opacity: 0;
 }
 .blog-page__top-bar-wrapper{
     background-color: #191919;
@@ -182,11 +183,13 @@ margin-right: 5rem;
 
 .blog-page__paginations{
     gap: 4rem;
-    position: absolute;
+    position: relative;
     right: 45rem;
+    padding-bottom: 5rem;
+    padding-top: 1rem;
 }
 .blog-page__pagination{
-    color: var(--main-color);
+    color: var(--white);
     background: var(--main-bg-color);
     padding: 2rem 2.3rem;
     border-radius: .5rem;
@@ -194,12 +197,11 @@ margin-right: 5rem;
     transition: all .3s ease-in-out;
 }
 .blog-page__pagination:hover  {
-    color: var(--main-bg-color);
-    background: var(--main-color);
- 
+    color: var(--main-color);
 }
-
+.blog-page__pagination__link{
+    color: var(--white);
+}
 .blog-page__pagination--active{
-    color: var(--main-bg-color);
-    background: var(--main-color);
+    color: var(--main-color);
 }
