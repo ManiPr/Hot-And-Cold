@@ -19,16 +19,21 @@ blogPageFilters.addEventListener('click', () => {
     }
 });
 blogPageContentList.forEach(blog=>{
-    blog.addEventListener('click',()=>{
+    blog.addEventListener('click',(event)=>{
+        addParamToUrl('cat',event.target.getAttribute('data-content-id'))
         data=blog.getAttribute('data-content-id')
+        console.log(data);
+        console.log(blogs);
         blogs.forEach(item=>{
+          console.log(item);
             item.classList.add('blog-block')
-            if(item.id === data){
-                console.log(item);
+            if(item.id === event.target.getAttribute('data-content-id')){
+              console.log('آره همینه');
                 item.classList.remove('blog-block')
             }
         })
     })
+    
 })
 
 const addParamToUrl = (param, value) => {
@@ -53,11 +58,11 @@ const paginateItems = (array, itemsPerPage, paginateParentElem, currentPage) => 
       <li class="blog-page__pagination">
         ${
           i === Number(currentPage) ? `
-            <a onclick="addParamToUrl('page', ${i})" class="blog-page__pagination__link blog-page__pagination--active">
+            <a  onclick="addParamToUrl('page', ${i})" class="blog-page__pagination__link blog-page__pagination--active">
               ${i}
             </a>
           ` : `
-            <a onclick="addParamToUrl('page', ${i})" class="blog-page__pagination__link">
+            <a  onclick="addParamToUrl('page', ${i})" class="blog-page__pagination__link">
               ${i}
             </a>
           `
@@ -66,12 +71,13 @@ const paginateItems = (array, itemsPerPage, paginateParentElem, currentPage) => 
     return paginatedItems
   }
   const add=(details,parent)=>{
+    let randomContentId = Math.floor(Math.random() * 4) + 1; // Generate a random number between 1 and 4
     parent.innerHTML = "";
     details.forEach((detail) => {
         parent.insertAdjacentHTML(
           "beforeend",
           `
-          <div id="رستوران" class="blog-page__blog">
+          <div id="${randomContentId}" class="blog-page__blog">
           <div class="blog-page__image-container">
               <img src="./Images/blog.jpg" class="blog-page__image">
           </div>
@@ -87,6 +93,22 @@ const paginateItems = (array, itemsPerPage, paginateParentElem, currentPage) => 
               <div class="blog-page__button"><a href="file:///C:/Users/ManiPr/Desktop/Programming/Hot%20And%20Cold/blog-deatail.html">ادامه سخن</a></div>
           </div>
       </div>
+      <div id="${randomContentId}" class="blog-page__blog">
+      <div class="blog-page__image-container">
+          <img src="./Images/blog.jpg" class="blog-page__image">
+      </div>
+      <div class="blog-page__content">
+          <div class="blog-page__titles">
+              <h3 class="blog-page__title">ماکارونی</h3>
+              <p class="blog-page__caption"><span class="blog-page__date">پنج فروردین هزار چارصد و یک</span>
+              <span class="blog-page___catagory">رویداد</span>
+              <span class="blog-page__tag">رستوران</span>
+              </p>
+              <p class="blog-page__description">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز</p>
+          </div>
+          <div class="blog-page__button"><a href="file:///C:/Users/ManiPr/Desktop/Programming/Hot%20And%20Cold/blog-deatail.html">ادامه سخن</a></div>
+      </div>
+  </div>
           `
         );
       });
